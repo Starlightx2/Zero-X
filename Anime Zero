@@ -1,7 +1,4 @@
--- Zero X VM runtime template. The compiler fills PROGRAM / ENTRY below.
--- Stack-based interpreter. Locals and upvalues are boxed cells {v=...} so that
--- closures capture by reference, and a fresh cell per loop iteration gives each
--- captured iteration its own variable (Lua semantics).
+
 local VM = (function()
     local select, error, setmetatable = select, error, setmetatable
     local tunpack = table.unpack or unpack
